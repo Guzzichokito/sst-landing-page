@@ -1,0 +1,184 @@
+<!--
+Project: SST - Sistema de Serviço ao Trabalhador
+Author: Guzzichokito
+Repository: https://github.com/Guzzichokito/sst-landing-page
+-->
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Guzzichokito">
+  <title>SST - Sistema de Serviço ao Trabalhador</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">SST</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Funcionalidades</a></li>
+          <li><a href="#how-it-works">Como Funciona</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Conectando Empresas e Prestadores de Serviço</h2>
+      <p>Encontre e contrate serviços com rapidez, segurança e eficiência.</p>
+      <a href="#contact" class="btn-primary">Comece Agora</a>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Funcionalidades</h2>
+      <div class="feature-cards">
+        <div class="card">
+          <h3>Cadastro Rápido</h3>
+          <p>Registre-se em poucos passos.</p>
+        </div>
+        <div class="card">
+          <h3>Busca Avançada</h3>
+          <p>Filtre por localização, tipo de serviço e avaliações.</p>
+        </div>
+        <div class="card">
+          <h3>Avaliações e Feedback</h3>
+          <p>Veja avaliações reais de outros usuários.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <h2>Como Funciona</h2>
+      <ol>
+        <li>Cadastre sua conta (empresa ou prestador).</li>
+        <li>Publique ou busque serviços.</li>
+        <li>Faça ou receba contratações seguras.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Entre em Contato</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Seu Nome" required>
+        <input type="email" name="email" placeholder="Seu Email" required>
+        <textarea name="message" rows="4" placeholder="Mensagem" required></textarea>
+        <button type="submit" class="btn-secondary">Enviar</button>
+      </form>
+      <p id="form-response"></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 SST. Todos os direitos reservados. Desenvolvido por <a href="https://github.com/Guzzichokito" target="_blank">Guzzichokito</a>.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+<!-- css/styles.css -->
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+.navbar {
+  background: #f8f8f8;
+  padding: 1rem 0;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  background: #eaeaea;
+}
+.btn-primary {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  background: #333;
+  color: #fff;
+}
+.features {
+  padding: 2rem 0;
+}
+.feature-cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 1;
+  min-width: 200px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+.how-it-works {
+  padding: 2rem 0;
+  background: #f4f4f4;
+}
+.contact {
+  padding: 2rem 0;
+}
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background: #555;
+  color: #fff;
+  cursor: pointer;
+}
+.footer {
+  background: #f8f8f8;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* js/script.js */
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('form-response').textContent = 'Obrigado pela sua mensagem! Entraremos em contato em breve.';
+  this.reset();
+});
