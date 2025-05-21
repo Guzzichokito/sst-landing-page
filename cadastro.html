@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Guzzichokito">
+  <title>Cadastro — SST</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo"><a href="index.html">SST</a></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="funcionalidades.html">Funcionalidades</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="cadastro.html" class="active">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FORMULÁRIO DE CADASTRO -->
+  <main class="contact">
+    <div class="container">
+      <h2>Crie sua conta</h2>
+      <form id="register-form">
+        <input type="text"    name="name"        placeholder="Nome Completo"     required>
+        <input type="email"   name="email"       placeholder="Email"              required>
+        <input type="password"name="password"    placeholder="Senha"              required>
+        <input type="password"name="confirm"     placeholder="Confirmar Senha"    required>
+        <input type="tel"     name="phone"       placeholder="Telefone (opcional)">
+        <select name="type" required>
+          <option value="" disabled selected>Tipo de Conta</option>
+          <option value="empresa">Empresa</option>
+          <option value="prestador">Prestador</option>
+        </select>
+        <button type="submit" class="btn-secondary">Cadastrar</button>
+      </form>
+      <p id="register-response"></p>
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 SST. Desenvolvido por <a href="https://github.com/Guzzichokito" target="_blank">Guzzichokito</a>.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT PARA FEEDBACK -->
+  <script>
+    document
+      .getElementById('register-form')
+      .addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('register-response').textContent =
+          'Cadastro realizado com sucesso! Verifique seu e-mail para ativar a conta.';
+        this.reset();
+      });
+  </script>
+</body>
+</html>
