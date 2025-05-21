@@ -34,7 +34,7 @@ Repository: https://github.com/Guzzichokito/sst-landing-page
       <div class="container">
         <h2>Sua plataforma de serviços confiável</h2>
         <p>Encontre prestadores ou ofereça seus serviços com segurança e rapidez.</p>
-        <a href="#contact" class="btn-primary">Cadastre-se Agora</a>
+        <a href="cadastro.html">Cadastre-se Agora</a>
       </div>
     </section>
 
@@ -84,134 +84,11 @@ Repository: https://github.com/Guzzichokito/sst-landing-page
     <section id="contact" class="contact">
       <div class="container">
         <h2>Fale Conosco</nobr></h2>
-        <form id="contact-form">
-          <input type="text" name="name" placeholder="Seu Nome" required>
-          <input type="email" name="email" placeholder="Seu Email" required>
-          <textarea name="message" rows="4" placeholder="Mensagem" required></textarea>
-          <button type="submit" class="btn-secondary">Enviar</button>
-        </form>
-        <p id="form-response"></p>
-      </div>
-    </section>
-  </main>
+        <li><a href="contato.html">Contato</a></li>
+        
 
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 SST. Desenvolvido por <a href="https://github.com/Guzzichokito" target="_blank">Guzzichokito</a>.</p>
     </div>
   </footer>
-
-  <script src="js/script.js"></script>
-</body>
-</html>
-
-<!-- css/styles.css -->
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-}
-.navbar {
-  background: #f8f8f8;
-  padding: 1rem 0;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-}
-.hero {
-  text-align: center;
-  padding: 4rem 0;
-  background: #eaeaea;
-}
-.btn-primary {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  border-radius: 4px;
-  background: #333;
-  color: #fff;
-}
-.features {
-  padding: 2rem 0;
-}
-.feature-cards {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.card {
-  flex: 1;
-  min-width: 200px;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  text-align: center;
-}
-.about {
-  padding: 2rem 0;
-}
-.testimonials {
-  padding: 2rem 0;
-  background: #f9f9f9;
-}
-.testimonial-cards {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.testimonial-cards .card {
-  flex: 1;
-  min-width: 250px;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  text-align: center;
-}
-.how-it-works {
-  display: none;
-}
-.contact {
-  padding: 2rem 0;
-}
-#contact-form input,
-#contact-form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-.btn-secondary {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  background: #555;
-  color: #fff;
-  cursor: pointer;
-}
-.footer {
-  background: #f8f8f8;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-/* js/script.js */
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  document.getElementById('form-response').textContent = 'Obrigado pela sua mensagem! Entraremos em contato em breve.';
-  this.reset();
-});
